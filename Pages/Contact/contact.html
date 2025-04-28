@@ -4,31 +4,31 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact | VitaSilens</title>
-  <link rel="stylesheet" href="../styles.css"/>
+  <link rel="stylesheet" href="../../styles.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <div class="logo">
-      <a href="home.html"><img src="assets/logo.svg" alt="VitaSilens Logo"/></a>
+      <a href="../Home/home.html"><img src="/Images/vita-silens-logo-red.png" alt="VitaSilens Logo" width="140" height="140"/></a>
       <h1>VitaSilens</h1>
     </div>
     <nav class="navbar">
       <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="../Home/home.html">Home</a></li>
+        <li><a href="../About/about.html">About</a></li>
+        <li><a href="../Projects/projects.html">Projects</a></li>
+        <li><a href="../Resume/resume.html">Resume</a></li>
+        <li><a href="../Resources/resources.html">Resources</a></li>
+        <li><a href="../Shop/shop.html" class="active">Shop</a></li>
+        <li><a href="../Contact/contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="contact">
     <h2>Let’s Connect</h2>
-    <p>Whether you have a question, want to collab, or just want to rant about that one bug that won’t go away — hit me up.</p>
+    <p>Whether you have a question, want to collaborate, or just want to talk about your favorite tech stack — feel free to reach out!</p>
 
     <form id="contact-form">
       <label for="name">Name</label>
@@ -43,14 +43,30 @@
       <button type="submit">Send</button>
     </form>
 
-    <div id="thank-you" style="display: none; margin-top: 20px;">
+    <div id="thank-you" style="display: none;">
       <h3>Thank you for reaching out! 🖤<br>I’ll get back to you soon.</h3>
+    </div>
+
+    <div class="social-links">
+      <h3>Find me online:</h3>
+      <a href="https://www.linkedin.com/in/maria-joseph-a6500a24b/" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/mjosewings" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="mailto:mariajoseph.ds@outlook.com" title="Email">
+        <i class="fas fa-envelope"></i> Email
+      </a>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 VitaSilens. Slide into my inbox, bug-free hopefully.</p>
   </footer>
+
+  <!-- Add Font Awesome for social icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <script>
     const form = document.getElementById('contact-form');
