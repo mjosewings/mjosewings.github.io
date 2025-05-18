@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Achievements | VitaSilens</title>
+    <link rel="stylesheet" href="../../styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            background: #000000; /* deep purple background */
+            color: #f3e6ff; /* very light lavender/white */
+            margin: 0; padding: 0 20px;
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #ee6fae; /* bright pink */
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto 60px;
+            padding-left: 40px;
+            border-left: 3px solid #d16ba5; /* soft pink timeline line */
+        }
+
+        .event {
+            position: relative;
+            margin-bottom: 50px;
+            cursor: pointer;
+        }
+
+        .event-date {
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 6px 14px;
+            background: #b084cc;
+            border-radius: 6px;
+            display: inline-block;
+            color: #f7c7d9;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .event:hover .event-date {
+            background-color: #ee6fae;
+            color: #fff;
+        }
+
+        .event-details {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.5s ease;
+            background: #2e1a47;
+            margin-top: 15px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(238, 111, 174, 0.5);
+            padding: 0 20px;
+        }
+
+        .event:hover .event-details {
+            max-height: 1000px; /* Arbitrary large max height */
+            opacity: 1;
+            padding: 20px;
+        }
+
+        .event-item {
+            margin-bottom: 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+        }
+
+        .event-item:last-child {
+            border-bottom: none;
+        }
+
+        .event-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #f7c7d9;
+        }
+
+        .event-description {
+            font-size: 0.9rem;
+            color: #d9b2de;
+            margin-bottom: 8px;
+        }
+
+        .event-item img {
+            max-width: 100%;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(255, 182, 193, 0.8);
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <a href="../Home/home.html"><img src="/Images/vita-silens-logo-red.png" alt="VitaSilens Logo" width="140" height="140"/></a>
+        <h1>VitaSilens</h1>
+    </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="../Home/home.html">Home</a></li>
+            <li><a href="../About/about.html">About</a></li>
+            <li><a href="../Projects/projects.html">Projects</a></li>
+            <li><a href="../Resume/resume.html">Resume</a></li>
+            <li><a href="../Resources/resources.html">Resources</a></li>
+            <li><a href="../Shop/shop.html">Shop</a></li>
+            <li><a href="../Contact/contact.html">Contact</a></li>
+            <li><a href="../Achievements/achievements.html">Achievements</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="achievements">
+        <h2>Achievements Timeline</h2>
+        <div class="timeline">
+
+            <div class="event">
+                <div class="event-date">June 2023</div>
+                <div class="event-content">
+                    <div class="event-title">Biology Award - Freshman Year</div>
+                    <div class="event-description">Awarded for outstanding achievement in Biology during freshman year of high school.</div>
+                    <img src="/Images/certificates/biology-award.jpg" alt="Biology Award Certificate Preview" />
+                </div>
+            </div>
+
+
+            <div class="event">
+                <div class="event-date">October 2023</div>
+                <div class="event-details">
+                    <div class="event-item">
+                        <div class="event-title"> Orientation and Leadership Training Certificate </div>
+                        <div class="event-description">
+                            Completed an introductory course in Python programming, covering foundational concepts and practical applications.
+                        </div>
+                        <img src="/Images/certificates/algebra1-award.jpg" alt="Orientation and Leadership Training Certificate Preview" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="event-date">December 2023</div>
+                <div class="event-details">
+                    <div class="event-item">
+                        <div class="event-title"> Foundations of Leadership Certificate </div>
+                        <div class="event-description">
+                            Completed an introductory course in Python programming, covering foundational concepts and practical applications.
+                        </div>
+                        <img src="/Images/certificates/algebra1-award.jpg" alt="Orientation and Leadership Training Certificate Preview" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="event-date">March 2024</div>
+                <div class="event-details">
+                    <div class="event-item">
+                        <div class="event-title">Introducing Visual Studio</div>
+                        <div class="event-description">Received for excellence in Algebra 1 coursework.</div>
+                        <img src="/Images/certificates/algebra1-award.jpg" alt="Algebra 1 Award Certificate Preview" />
+                    </div>
+                    <div class="event-item">
+                        <div class="event-title">Inside the Mind of an Aspiring Data Scientist</div>
+                        <div class="event-description">Received for excellence in Algebra 1 coursework.</div>
+                        <img src="/Images/certificates/algebra1-award.jpg" alt="Algebra 1 Award Certificate Preview" />
+                    </div>
+                    <div class="event-item">
+                        <div class="event-title">Foundations of Diversity, Equity, Inclusion, and Belonging</div>
+                        <div class="event-description">Received for excellence in Algebra 1 coursework.</div>
+                        <img src="/Images/certificates/algebra1-award.jpg" alt="Algebra 1 Award Certificate Preview" />
+                    </div>
+                    <div class="event-item">
+                        <div class="event-title">Apple Search Ads</div>
+                        <div class="event-description">Received for excellence in Algebra 1 coursework.</div>
+                        <img src="/Images/certificates/algebra1-award.jpg" alt="Algebra 1 Award Certificate Preview" />
+                    </div>
+                </div>
+            </div>
+            <div class="event">
+                <div class="event-date">August 2024</div>
+                <div class="event-details">
+                    <div class="event-item">
+                        <div class="event-title">Introduction to SQL </div>
+                        <div class="event-description">
+                            Received from DataCamp by learning how
+                            to create and query relational databases using SQL.
+                        </div>
+                        <img src="/Images/certificates/algebra1-award.jpg" alt="Introduction to SQL Certificate Preview" />
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="event">
+                <div class="event-date">October 2024</div>
+                <div class="event-details">
+                    <div class="event-item">
+                        <div class="event-title">Introduction to Python</div>
+                        <div class="event-description">
+                            Completed an introductory course in Python programming, covering foundational concepts and practical applications.
+                        </div>
+                        <img src="/Images/certificates/algebra1-award.jpg" alt="Python Course Certificate Preview" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="event">
+            <div class="event-date">January 2025</div>
+            <div class="event-details">
+                <div class="event-item">
+                    <div class="event-title">SQL (Basic) Certificate</div>
+                    <div class="event-description">
+                        Earned the SQL (Basic) Certificate from HackerRank, showcasing foundational SQL skills.
+                    </div>
+                    <img src="/Images/certificates/algebra1-award.jpg" alt="SQL (Basic) Certificate Preview" />
+                    <div class="event-title"> Introduction to Artificial Intelligence</div>
+                    <div class="event-description">
+                        Completed an introductory course in Artificial Intelligence, covering foundational concepts and practical applications.
+                    </div>
+                    <img src="/Images/certificates/algebra1-award.jpg" alt="Artificial Intelligence Certificate Preview" />
+                    <div class="event-title"> Visualizing Your Leadership Journey </div>
+                    <div class="event-description">
+                        Completed an introductory course in Data Science, covering foundational concepts and practical applications.
+                    </div>
+                    <img src="/Images/certificates/algebra1-award.jpg" alt="Visualizing Your Leadership Journey Certificate Preview" />
+                    <div class="event-title"> Introduction to Data Visualization</div>
+                    <div class="event-description">
+                        Completed an introductory course in Data Visualization, covering foundational concepts and practical applications.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+            <div class="event">
+                <div class="event-date">April 2024</div>
+                <div class="event-content">
+                    <div class="event-title">Certified Data Analyst</div>
+                    <div class="event-description">Completed official certification for data analysis techniques and tools.</div>
+                    <img src="/Images/certificates/data-analyst-cert.jpg" alt="Data Analyst Certificate Preview" />
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="event-date">March 2025</div>
+                <div class="event-details">
+                    <div class="event-item">
+                        <div class="event-title"> Intermediate Python </div>
+                        <div class="event-description">Received for excellence in Algebra 1 coursework.</div>
+                        <img src="/Images/certificates/intermediatepython.jpg" alt="Intermediate Python Certificate Preview" />
+                    </div>
+                    <div class="event-item">
+                        <div class="event-title">Inside the Mind of an Aspiring Data Scientist</div>
+                        <div class="event-description">Received for excellence in Algebra 1 coursework.</div>
+                        <img src="/Images/certificates/algebra1-award.jpg" alt="Algebra 1 Award Certificate Preview" />
+                    </div>
+                    <div class="event-item">
+                        <div class="event-title">Foundations of Diversity, Equity, Inclusion, and Belonging</div>
+                        <div class="event-description">Received for excellence in Algebra 1 coursework.</div>
+                        <img src="/Images/certificates/algebra1-award.jpg" alt="Algebra 1 Award Certificate Preview" />
+                    </div>
+                    <div class="event-item">
+                        <div class="event-title">Apple Search Ads</div>
+                        <div class="event-description">Received for excellence in Algebra 1 coursework.</div>
+                        <img src="/Images/certificates/algebra1-award.jpg" alt="Algebra 1 Award Certificate Preview" />
+                    </div>
+                    <div class="event-item">
+                        <div class="event-title">Introduction to MongoDB in Python </div>
+                        <div class="event-description">Received for excellence in Algebra 1 coursework.</div>
+                        <img src="/Images/certificates/introductiontomongodb-certificate.jpg" alt="Introduction to MongoDB in Python Certificate Preview" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="event-date">April 2025</div>
+                <div class="event-details">
+                    <div class="event-item">
+                        <div class="event-title">Introduction to Java</div>
+                        <div class="event-description">
+                            Completed an introductory course in Java programming, covering foundational concepts and practical applications.
+                        </div>
+                        <img src="/Images/certificates/introductiontojava-certificate.jpg" alt="Java Course Certificate Preview" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more events here -->
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 VitaSilens. Created with ✨, ☕, and lots of debugging.</p>
+</footer>
+</body>
+</html>

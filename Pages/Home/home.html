@@ -2,46 +2,305 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VitaSilens</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Playfair+Display&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #d47fa6;
+      --primary-dark: #c8a2c8;
+      --bg-main: #0a0a0a;
+      --bg-secondary: #1b0f12;
+      --text-light: #eaeaea;
+      --text-muted: #bbb;
+      --card-bg: #1a1a1a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Fira Code', monospace;
+      background: linear-gradient(160deg, var(--bg-main), var(--bg-secondary) 80%);
+      color: var(--text-light);
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #0c0c0c;
+      padding: 20px;
+      border-bottom: 1px solid #333;
+      text-align: center;
+    }
+
+    .logo img {
+      filter: drop-shadow(0 0 10px #c8a2c8);
+    }
+
+    .logo h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: var(--primary);
+      margin: 10px 0 0;
+    }
+
+    .logo h4 {
+      color: var(--text-muted);
+      font-style: italic;
+      font-size: 1.1rem;
+      animation: glowText 5s infinite alternate;
+    }
+
+    @keyframes glowText {
+      from { color: #666; text-shadow: none; }
+      to { color: #f0f0f0; text-shadow: 0 0 10px #c8a2c8; }
+    }
+
+    nav.navbar ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+      flex-wrap: wrap;
+    }
+
+    nav.navbar ul li {
+      margin: 8px 15px;
+    }
+
+    nav.navbar ul li a {
+      color: #ccc;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    nav.navbar ul li a:hover,
+    nav.navbar ul li a.active {
+      background-color: var(--primary);
+      color: #fff;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid #222;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 30px rgba(176, 30, 60, 0.1);
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section h2, section h3 {
+      font-family: 'Playfair Display', serif;
+      color: #fff;
+    }
+
+    .intro h2 {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+    }
+
+    .intro p {
+      line-height: 1.7;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+
+    .intro ul {
+      list-style: square;
+      padding-left: 20px;
+      color: #eee;
+    }
+
+    .intro ul li {
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 24px;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+
+    .cta:hover {
+      background: var(--primary-dark);
+    }
+
+    .scroll-down {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1.5rem;
+      color: #555;
+      animation: float 3s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    .shadows h3,
+    .projects h3 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .projects {
+      text-align: center;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid #333;
+      padding: 20px;
+      border-radius: 12px;
+      transition: 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.02);
+      border-color: var(--primary);
+      box-shadow: 0 0 20px #d47fa6;
+    }
+
+    .project-card h4 {
+      margin: 0 0 10px;
+      color: #fff;
+    }
+
+    .project-card p {
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+
+    .philosophy {
+      font-style: italic;
+      text-align: center;
+      color: #aaa;
+      padding: 20px 10px;
+    }
+
+    .social-links {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .social-links a {
+      color: #ccc;
+      margin: 0 10px;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--primary);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #111;
+      border-top: 1px solid #333;
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="home.html"> <img src="/Images/vita-silens-logo-red.png" alt="VitaSilens Logo" width="140" height="140"/></a>
-      <h1>VitaSilens</h1>
-      <h4 style="text-align: center";> Sees All. Knows All.</h4>
-    </div>
-    <nav class="navbar">
-      <ul>
-        <li><a href="../Home/home.html">Home</a></li>
-        <li><a href="../About/about.html">About</a></li>
-        <li><a href="../Projects/projects.html">Projects</a></li>
-        <li><a href="../Resume/resume.html">Resume</a></li>
-        <li><a href="../Resources/resources.html">Resources</a></li>
-        <li><a href="..Shop/shop.html" class="active">Shop</a></li>
-        <li><a href="../Contact/contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="intro">
-    <h2>Welcome to VitaSilens</h2>
-    <p>Where code meets creativity, and every bug is a lesson in patience.</p>
-    <p>Hello there, fellow coder, creator, or curious wanderer. I’m MJ, and this is where I showcase my passion for technology, coding, and creating solutions with style. Whether you’re here to explore my projects, dive into some real talk about programming struggles (we’ve all been there), or find a place to connect with like-minded people, you’ve come to the right spot. We believe in supporting all people, regardless of identity, and encouraging creativity through innovation. So grab a coffee, grab a notebook, and join me on this code-filled journey. Let’s build, break, and laugh through every error message together.</p>
+<header>
+  <div class="logo">
+    <a href="home.html">
+      <img src="/Images/vita-silens-logo-red.png" alt="VitaSilens Logo" width="140" height="140"/>
+    </a>
+    <h1>VitaSilens</h1>
+    <h4>Qui cuncta videt. Cuncta novit.</h4>
+  </div>
+  <nav class="navbar">
     <ul>
-      <li><strong>Code that speaks:</strong> My portfolio showcases everything from data science to bioinformatics.</li>
-      <li><strong>Real Talk:</strong> Debugging isn’t easy—let’s laugh about it.</li>
-      <li><strong>Empowered Connections:</strong> Resources for women, non-binary individuals, and the Black community to thrive in tech.</li>
-      <li><strong>Merch Coming Soon:</strong> Because we all need that “Debugging, Please Wait” mug.</li>
+      <li><a href="../Home/home.html">Home</a></li>
+      <li><a href="../About/about.html">About</a></li>
+      <li><a href="../Projects/projects.html">Projects</a></li>
+      <li><a href="../Resume/resume.html">Resume</a></li>
+      <li><a href="../Resources/resources.html">Resources</a></li>
+      <li><a href="../Shop/shop.html">Shop</a></li>
+      <li><a href="../Contact/contact.html">Contact</a></li>
+      <li><a href="../Achievements/achievements.html">Achievements</a></li>
     </ul>
-    <a href="#projects" class="cta">Explore My Work</a>
-  </section>
+  </nav>
+</header>
 
-  <footer>
-    <p>&copy; 2025 VitaSilens. Created with ✨, ☕, and lots of debugging.</p>
-  </footer>
+<section class="intro">
+  <h2>Welcome to VitaSilens</h2>
+  <p><strong>I’m MJ</strong> — a digital strategist, data whisperer, and architect of elegant chaos. This is where logic dances with creativity, and the silence of mastery speaks louder than noise.</p>
+  <ul>
+    <li><strong>Data with Purpose:</strong> From bioinformatics to predictive health analytics — real insights, real change.</li>
+    <li><strong>Justice by Design:</strong> Mapping networks, decoding systems, and empowering underrepresented voices.</li>
+    <li><strong>Unapologetically Sharp:</strong> Because we don’t tone down brilliance. We weaponize it.</li>
+    <li><strong>Silently Loud:</strong> Root-level tech, Black feminine power, and a villain-era aesthetic that makes firewalls sweat.</li>
+  </ul>
+  <a href="#projects" class="cta">Explore My Work</a>
+  <div class="scroll-down">↓</div>
+</section>
+
+<section class="shadows">
+  <h3>In the Shadows</h3>
+  <p>“Silence is not the absence of voice, but the presence of power.”<br/>Here lie glimpses of layered projects, forensic pursuits, and systems designed to observe, analyze, and intervene—quietly.</p>
+</section>
+
+<section id="projects" class="projects">
+  <h3>Projects</h3>
+  <div class="project-grid">
+    <div class="project-card">
+      <h4>Opioid Addiction & Drug Repurposing</h4>
+      <p>Exploring gene expression data to identify potential FDA-approved drugs for treating opioid dependence through bioinformatics pipelines.</p>
+    </div>
+    <div class="project-card">
+      <h4>Crime Network Analysis</h4>
+      <p>Applied network theory to visualize criminal associations, focusing on influence patterns and predictive interventions.</p>
+    </div>
+    <!-- Add more projects as needed -->
+  </div>
+</section>
+
+<section class="philosophy">
+  <p>"Let them underestimate you. The silence is calculated." <br/>—VitaSilens</p>
+</section>
+
+<div class="social-links">
+  <a href="#">GitHub</a>
+  <a href="https://www.linkedin.com/in/maria-joseph-a6500a24b/">LinkedIn</a>
+  <a href="#">Twitter</a>
+  <!-- Add your actual social links -->
+</div>
+
+<footer>
+  &copy; 2025 MJ | VitaSilens. All rights reserved.
+</footer>
 </body>
 </html>
